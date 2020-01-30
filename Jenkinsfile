@@ -1,7 +1,7 @@
 pipeline {
             tools
 	{
-		maven 'MAVEN_HOME'
+		maven 'Maven_HOME'
 		jdk 'JAVA_HOME'
                         msbuild 'MSBuild'
 	}
