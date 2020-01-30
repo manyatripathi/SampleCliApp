@@ -1,4 +1,10 @@
 pipeline {
+            tools
+	{
+		maven 'MAVEN_HOME'
+		jdk 'JAVA_HOME'
+                        msbuild 'MSBuild'
+	}
 agent any
 stages {
 stage ('Checkout') {
