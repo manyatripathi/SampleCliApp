@@ -22,6 +22,7 @@ node('dotnet')
    stage('Initial Setup')
    {
 	FAILED_STAGE=env.STAGE_NAME
+	sh 'dotnet --version'
         sh 'dotnet restore'
         sh 'dotnet clean'
    }
