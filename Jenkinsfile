@@ -13,9 +13,6 @@ podTemplate(cloud:'openshift',label: 'dotnet',
 {
 node('dotnet') 
 {
-   def MAVEN_HOME = tool "Maven_HOME"
-   def JAVA_HOME = tool "JAVA_HOME"
-   env.PATH="${env.PATH}:${MAVEN_HOME}/bin:${JAVA_HOME}/bin"
    stage('Checkout')
    {
        git credentialsId: 'userId', url: 'https://github.com/manyatripathi/SampleCliApp', branch: 'master'
@@ -24,16 +21,16 @@ node('dotnet')
    
    stage('Initial Setup')
    {
-		FAILED_STAGE=env.STAGE_NAME
-       sh 'dotnet restore --configfile NuGet.Config'
-	   sh 'dotnet clean'
+	FAILED_STAGE=env.STAGE_NAME
+        sh 'dotnet restore'
+        sh 'dotnet clean'
    }
    
     stage('Build and Pack')
    {
         FAILED_STAGE=env.STAGE_NAME
         sh 'dotnet build --configuration Release'
-		sh 'dotnet pack --no-build --output nupkgs'
+        sh 'dotnet pack --no-build --output nupkgs'
    }
   
 	     
