@@ -3,7 +3,7 @@ podTemplate(cloud:'openshift',label: 'dotnet',
   containers: [
     containerTemplate(
       name: 'jnlp',
-      image: 'blrocpimpregistry:5000/manya97/jnlp-slave-dotnet:latest1',
+      image: 'blrocpimpregistry:5000/dotnet/core/sdk:2.1',
       alwaysPullImage: true,
       privileged: true,
       envVars: [envVar(key:'http_proxy',value:''),envVar(key:'https_proxy',value:'')],
