@@ -3,10 +3,10 @@ podTemplate(cloud:'openshift',label: 'dotnet',
   containers: [
     containerTemplate(
       name: 'jnlp',
-      image: 'manya97/jnlp-slave-dotnet:slave',
+      image: 'blrocpimpregistry:5000/manya97/jnlp-slave-dotnet:slave',
       alwaysPullImage: true,
       privileged: true,
-      //envVars: [envVar(key:'http_proxy',value:''),envVar(key:'https_proxy',value:'')],
+      envVars: [envVar(key:'http_proxy',value:''),envVar(key:'https_proxy',value:'')],
       args: '${computer.jnlpmac} ${computer.name}',
       ttyEnabled: true
     )])
