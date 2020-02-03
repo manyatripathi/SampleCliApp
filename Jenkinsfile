@@ -18,7 +18,7 @@ node('dotnet')
        git credentialsId: 'userId', url: 'https://github.com/manyatripathi/SampleCliApp', branch: 'master'
        
    }
-   withEnv(['http_proxy=http://gaurav.walecha:Infosys2203@10.74.91.103:80,https_proxy=http://gaurav.walecha:Infosys2203@10.74.91.103:80']) 
+   withEnv(['http_proxy=http://gaurav.walecha:Infosys2203@10.74.91.103:80','https_proxy=http://gaurav.walecha:Infosys2203@10.74.91.103:80']) 
 {
    stage('Initial Setup')
    {
