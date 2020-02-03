@@ -23,7 +23,7 @@ node('dotnet')
    {
 	FAILED_STAGE=env.STAGE_NAME
 	sh 'dotnet --version'
-        sh 'dotnet restore'
+        sh 'dotnet restore --configfile nuget.config'
         sh 'dotnet clean'
    }
    
