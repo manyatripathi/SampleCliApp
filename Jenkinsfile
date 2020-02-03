@@ -22,8 +22,8 @@ node('dotnet')
    stage('Initial Setup')
    {
 	FAILED_STAGE=env.STAGE_NAME
-	sh 'setx http_proxy http://gaurav.walecha:Infosys2203@10.68.248.34:80'
-	sh 'setx https_proxy http://gaurav.walecha:Infosys2203@10.68.248.34:80'
+	sh 'set http_proxy http://gaurav.walecha:Infosys2203@10.68.248.34:80'
+	sh 'set https_proxy http://gaurav.walecha:Infosys2203@10.68.248.34:80'
 	sh 'dotnet --version'
         sh 'dotnet restore --configfile nuget.config'
         sh 'dotnet clean'
