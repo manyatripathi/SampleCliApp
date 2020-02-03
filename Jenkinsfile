@@ -22,8 +22,9 @@ node('dotnet')
    stage('Initial Setup')
    {
 	FAILED_STAGE=env.STAGE_NAME
-	sh 'export http_proxy=http://gaurav.walecha:Infosys2203@10.68.248.34:80'
-	sh 'export https_proxy=http://gaurav.walecha:Infosys2203@10.68.248.34:80'
+	sh 'export http_proxy=http://gaurav.walecha:Infosys2203@10.74.91.103:80'
+	sh 'export https_proxy=http://gaurav.walecha:Infosys2203@10.74.91.103:80'
+	   sh 'echo $http_proxy'
 	sh 'dotnet --version'
         sh 'dotnet restore'
         sh 'dotnet clean'
