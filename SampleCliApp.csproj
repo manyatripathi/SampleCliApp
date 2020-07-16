@@ -7,16 +7,15 @@
     <Version>1.0.0</Version>
     <Authors>Neel</Authors>
     <Company>CompanyX</Company>
-     <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
-    <PreserveCompilationContext>false</PreserveCompilationContext>
+     
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Microsoft.AspNetCore.App"  />
   </ItemGroup>
 
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.1.0-preview1-final" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools"  />
   </ItemGroup>
 
 </Project>
