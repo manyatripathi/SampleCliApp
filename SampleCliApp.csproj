@@ -7,6 +7,8 @@
     <Version>1.0.0</Version>
     <Authors>Neel</Authors>
     <Company>CompanyX</Company>
+     <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
+    <PreserveCompilationContext>false</PreserveCompilationContext>
   </PropertyGroup>
 
   <ItemGroup>
