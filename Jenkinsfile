@@ -1,4 +1,4 @@
-def FAILED_STAGE
+def FAILED_STAGEs
 podTemplate(cloud:'openshift',label: 'dotnet',
   containers: [
     containerTemplate(
